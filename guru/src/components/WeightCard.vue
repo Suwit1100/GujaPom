@@ -46,9 +46,9 @@ function handleSave() {
 
 <template>
     <div class="card mb-3">
-        <div class="card-body text-center">
+        <div class="card-body text-cente bg-dark">
             <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title mb-0">น้ำหนักวันนี้</h5>
+                <h5 class="card-title mb-0 text-white">น้ำหนักวันนี้</h5>
                 <span class="badge bg-dark text-white border border-secondary rounded-pill px-3">
                     {{ trend === '↓' ? 'LD' : trend === '↑' ? 'UP' : 'ST' }}
                     <span

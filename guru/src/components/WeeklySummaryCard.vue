@@ -82,19 +82,19 @@ const insight = computed(() => {
 
 <template>
     <div class="card">
-        <div class="card-body">
-            <h5 class="card-title text-center mb-4">WEEKLY RECAP</h5>
+        <div class="card-body bg-dark">
+            <h5 class="card-title text-center mb-4 text-white">WEEKLY RECAP</h5>
 
             <div class="row g-3 mb-4">
                 <div class="col-6">
                     <div class="p-3 rounded-4 h-100" style="background: #252525;">
-                        <small class="text-muted d-block mb-1">Weight</small>
+                        <small class="text-white d-block mb-1">Weight</small>
                         <div class="fw-bold fs-5 text-white">{{ weightTrend }}</div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="p-3 rounded-4 h-100" style="background: #252525;">
-                        <small class="text-muted d-block mb-1">Habits</small>
+                        <small class="text-white d-block mb-1">Habits</small>
                         <div class="fw-bold fs-5" :class="habitCompletion > 70 ? 'text-success' : 'text-white'">
                             {{ habitCompletion }}%
                         </div>
@@ -107,7 +107,7 @@ const insight = computed(() => {
 
             <div class="mb-4">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <small class="text-muted">Food</small>
+                    <small class="text-white">Food</small>
                     <small class="text-white">Clean {{ foodSummary.clean }} / Normal {{ foodSummary.normal }} / Cheat {{
                         foodSummary.cheat }}</small>
                 </div>
@@ -120,7 +120,7 @@ const insight = computed(() => {
 
             <div class="mb-4">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <small class="text-muted">Workout</small>
+                    <small class="text-white">Workout</small>
                     <small class="text-white">Done {{ workoutSummary.complete }} / Partial {{ workoutSummary.partial
                         }}</small>
                 </div>

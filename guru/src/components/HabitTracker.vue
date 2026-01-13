@@ -26,13 +26,13 @@ watch([water, movement, sleep], () => {
 
 <template>
     <div class="card mb-3">
-        <div class="card-body">
+        <div class="card-body bg-dark">
             <h5 class="card-title mb-3">Habits</h5>
 
             <div class="d-flex flex-column gap-3">
                 <div class="d-flex justify-content-between align-items-center p-3 rounded-3 transition-bg"
                     :style="water ? 'background: rgba(29, 185, 84, 0.1)' : 'background: #2a2a2a'">
-                    <label class="form-check-label fs-6 fw-500" for="habitWater">💧 ดื่มน้ำ</label>
+                    <label class="form-check-label fs-6 fw-500 text-white" for="habitWater">💧 ดื่มน้ำ</label>
                     <div class="form-check form-switch m-0">
                         <input v-model="water" class="form-check-input" type="checkbox" role="switch" id="habitWater"
                             style="transform: scale(1.3);" />
@@ -41,7 +41,7 @@ watch([water, movement, sleep], () => {
 
                 <div class="d-flex justify-content-between align-items-center p-3 rounded-3 transition-bg"
                     :style="movement ? 'background: rgba(29, 185, 84, 0.1)' : 'background: #2a2a2a'">
-                    <label class="form-check-label fs-6 fw-500" for="habitMovement">🏃‍♂️ ขยับร่างกาย</label>
+                    <label class="form-check-label fs-6 fw-500 text-white" for="habitMovement">🏃‍♂️ ขยับร่างกาย</label>
                     <div class="form-check form-switch m-0">
                         <input v-model="movement" class="form-check-input" type="checkbox" role="switch"
                             id="habitMovement" style="transform: scale(1.3);" />
@@ -50,7 +50,7 @@ watch([water, movement, sleep], () => {
 
                 <div class="d-flex justify-content-between align-items-center p-3 rounded-3 transition-bg"
                     :style="sleep ? 'background: rgba(29, 185, 84, 0.1)' : 'background: #2a2a2a'">
-                    <label class="form-check-label fs-6 fw-500" for="habitSleep">😴 นอนพอ (≥ 6 ชม.)</label>
+                    <label class="form-check-label fs-6 fw-500 text-white" for="habitSleep">😴 นอนพอ (≥ 6 ชม.)</label>
                     <div class="form-check form-switch m-0">
                         <input v-model="sleep" class="form-check-input" type="checkbox" role="switch" id="habitSleep"
                             style="transform: scale(1.3);" />

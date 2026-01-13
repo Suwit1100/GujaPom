@@ -17,11 +17,11 @@ function goToSummary() {
     <div class="container py-4">
         <header class="d-flex justify-content-between align-items-end mb-4 px-1">
             <div>
-                <span class="text-muted small text-uppercase">Overview</span>
+                <span class=" small text-uppercase">Overview</span>
                 <h1 class="mb-0 display-6 fw-bold">Today</h1>
             </div>
             <div class="text-end">
-                <span class="text-muted small">{{ new Date().toLocaleDateString('th-TH', {
+                <span class=" small">{{ new Date().toLocaleDateString('th-TH', {
                     weekday: 'short', day:
                     'numeric'}) }}</span>
             </div>

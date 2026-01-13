@@ -23,13 +23,13 @@ watch([steps, noDrink], () => {
 
 <template>
     <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title mb-3">Daily Goals</h5>
+        <div class="card-body bg-dark">
+            <h5 class="card-title mb-3 text-white">Daily Goals</h5>
 
             <div class="d-flex flex-column gap-3">
                 <div class="d-flex justify-content-between align-items-center p-3 rounded-3 transition-bg"
                     :style="steps ? 'background: rgba(29, 185, 84, 0.1)' : 'background: #2a2a2a'">
-                    <label class="form-check-label fs-6 fw-500" for="goalSteps">👟 เดิน ≥ 6,000 ก้าว</label>
+                    <label class="form-check-label fs-6 fw-500 text-white" for="goalSteps">👟 เดิน ≥ 6,000 ก้าว</label>
                     <div class="form-check form-switch m-0">
                         <input v-model="steps" class="form-check-input" type="checkbox" role="switch" id="goalSteps"
                             style="transform: scale(1.3);" />
@@ -38,7 +38,7 @@ watch([steps, noDrink], () => {
 
                 <div class="d-flex justify-content-between align-items-center p-3 rounded-3 transition-bg"
                     :style="noDrink ? 'background: rgba(29, 185, 84, 0.1)' : 'background: #2a2a2a'">
-                    <label class="form-check-label fs-6 fw-500" for="goalNoDrink">🥤 งดน้ำหวาน/Lกฮ</label>
+                    <label class="form-check-label fs-6 fw-500 text-white" for="goalNoDrink">🥤 งดน้ำหวาน/Lกฮ</label>
                     <div class="form-check form-switch m-0">
                         <input v-model="noDrink" class="form-check-input" type="checkbox" role="switch" id="goalNoDrink"
                             style="transform: scale(1.3);" />

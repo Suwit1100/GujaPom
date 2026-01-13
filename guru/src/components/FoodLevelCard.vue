@@ -20,8 +20,8 @@ function select(level: FoodLevel) {
 
 <template>
     <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title">อาหารวันนี้</h5>
+        <div class="card-body bg-dark">
+            <h5 class="card-title text-white">อาหารวันนี้</h5>
             <div class="d-grid gap-3">
 
                 <button @click="select('clean')"
