@@ -31,7 +31,7 @@ function goToSummary() {
         <FoodLevelCard />
         <WorkoutTodayCard />
         <HabitTracker />
-        <DailyGoal />
+        <!-- <DailyGoal /> -->
 
         <div class="d-grid mt-5 mb-4">
             <button @click="goToSummary" class="btn btn-outline-secondary py-3 text-white border-0"

@@ -20,8 +20,11 @@ export interface WorkoutEntry {
 export interface HabitEntry {
   date: string;
   water: boolean;
-  movement: boolean;
+  sugarFree: boolean; // เพิ่มใหม่
+  alcoholFree: boolean; // เพิ่มใหม่
+  mealLimit: boolean; // เพิ่มใหม่
   sleep: boolean;
+  // movement: boolean;  <-- ลบทิ้งหรือคอมเมนต์ไว้ก็ได้ครับ
 }
 
 export interface DailyGoalEntry {

@@ -35,16 +35,23 @@ const workoutSummary = computed(() => {
     return { complete, partial, skip };
 });
 
+// ปรับปรุงการคำนวณ Habit Completion เป็น 5 หัวข้อใหม่
 const habitCompletion = computed(() => {
     const habits = data.value.habits;
     if (habits.length === 0) return 0;
 
-    const total = habits.length * 3;
+    // มี 5 habits: water, sugarFree, alcoholFree, mealLimit, sleep
+    const totalPossible = habits.length * 5;
     const done = habits.reduce((sum, h) => {
-        return sum + (h.water ? 1 : 0) + (h.movement ? 1 : 0) + (h.sleep ? 1 : 0);
+        return sum +
+            (h.water ? 1 : 0) +
+            (h.sugarFree ? 1 : 0) +
+            (h.alcoholFree ? 1 : 0) +
+            (h.mealLimit ? 1 : 0) +
+            (h.sleep ? 1 : 0);
     }, 0);
 
-    return Math.round((done / total) * 100);
+    return Math.round((done / totalPossible) * 100);
 });
 
 const goalCompletion = computed(() => {
@@ -112,9 +119,9 @@ const insight = computed(() => {
                         foodSummary.cheat }}</small>
                 </div>
                 <div class="progress rounded-pill" style="height: 8px; background: #333;">
-                    <div class="progress-bar bg-success" :style="{ width: (foodSummary.clean * 14) + '%' }"></div>
-                    <div class="progress-bar bg-primary" :style="{ width: (foodSummary.normal * 14) + '%' }"></div>
-                    <div class="progress-bar bg-warning" :style="{ width: (foodSummary.cheat * 14) + '%' }"></div>
+                    <div class="progress-bar bg-success" :style="{ width: (foodSummary.clean * 14.3) + '%' }"></div>
+                    <div class="progress-bar bg-primary" :style="{ width: (foodSummary.normal * 14.3) + '%' }"></div>
+                    <div class="progress-bar bg-warning" :style="{ width: (foodSummary.cheat * 14.3) + '%' }"></div>
                 </div>
             </div>
 
@@ -122,11 +129,13 @@ const insight = computed(() => {
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <small class="text-white">Workout</small>
                     <small class="text-white">Done {{ workoutSummary.complete }} / Partial {{ workoutSummary.partial
-                        }}</small>
+                    }}</small>
                 </div>
                 <div class="progress rounded-pill" style="height: 8px; background: #333;">
-                    <div class="progress-bar bg-success" :style="{ width: (workoutSummary.complete * 14) + '%' }"></div>
-                    <div class="progress-bar bg-warning" :style="{ width: (workoutSummary.partial * 14) + '%' }"></div>
+                    <div class="progress-bar bg-success" :style="{ width: (workoutSummary.complete * 14.3) + '%' }">
+                    </div>
+                    <div class="progress-bar bg-warning" :style="{ width: (workoutSummary.partial * 14.3) + '%' }">
+                    </div>
                 </div>
             </div>
 
